@@ -37,7 +37,7 @@ const actions = {
 const mutations = {
 	setTodos: (state, todos) => (state.todos = todos),
 	newTodo: (state, todo) => state.todos.unshift(todo),
-	updateTodo: (state, updatedTodo) => state.todos = (state.todos.map(todo=> todo.id === updatedTodo.id ? todo = updatedTodo : todo)),
+	updateTodo: (state, updatedTodo) => state.todos = state.todos.map(todo=> todo.id === updatedTodo.id ? todo = updatedTodo : todo),
 	deleteTodo: (state, id) => state.todos.filter(todo=> todo.id !== id)
 };
 
